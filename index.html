@@ -4,7 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />        
-        <title>digital clock</title>
+        <title>Neumorphic digital clock Concept</title>
+        <meta name="author" content="Mgregchi, Michael Amadi">
+        <meta name="creator" content="Mgregchi, Michael Amadi">
+        <meta name="keywords" content="Neumorphic, digital-clock, neumorphism, neumorphic-design">
+        <meta name="robots" content="index, follow">
         
     </head>
 <body>
@@ -14,13 +18,34 @@
             @font-face {
                 font-family: mine;
                 src: url(./fonts/DS-DIGI.TTF);
-                font-size: 5px;
+                font-size: 1rem;
                 font-weight: normal;
+
             }   
 
-
-            .fonta {
+            .neuFont {
                 font-family: mine;
+                font-size: 1.5rem;
+            }
+
+                /* If the screen size is 601px or more, set the font-size of <div> to 80px */
+            @media only screen and (min-width: 601px) {
+                .neuFont{
+                    font-size: 80px;
+                }
+            }
+
+                /* If the screen size is 600px or less, set the font-size of <div> to 30px */
+            @media only screen and (max-width: 600px) {
+                .neuFont{
+                    font-size: 30px;
+                }
+            }
+
+            .info {
+                font-family: mine;
+                margin: 6rem;
+                
             }
 
             body {
@@ -34,8 +59,69 @@
                 margin: 0 auto;
             }
 
+            @media only screen and (max-width: 350px) {
+                    body {
+                        background-color: red;
+                    }
+                    .neuFont{
+                        font-size: 1rem;
+                        color: white;
+                    }                    
+            }  
+            @media only screen and (min-width: 300px) {
+                    body {
+                        background-color: hsla(91, 53%, 51%, 0.773);
+                        color: white;
+                    }
+            }
 
-            section {
+            @media only screen and (min-width: 400px) {
+                    body {
+                        background-color: #e0e0e0;
+                        color: white;
+                    }
+            }
+
+
+            @media only screen and (min-width: 600px) {
+                    body {
+                        background-color: #0400ff;
+                    }
+            }  
+            @media only screen and (min-width: 650px) {
+                    body {
+                        background-color: #181717;
+                    }
+            }  
+
+            @media only screen and (min-width: 750px) {
+                    body {
+                        background-color: hsl(300, 87%, 37%);
+                    }
+            }  
+
+            @media only screen and (min-width: 850px) {
+                    body {
+                        background-color: #ab12e7;
+                    }
+            }  
+
+            @media only screen and (min-width: 950px) {
+                    body {
+                        background-color: hsl(66, 88%, 52%);
+                    }
+            }  
+
+
+            @media only screen and (min-width: 1000px) {
+                    body {
+                        background-color: hsl(120, 93%, 17%);
+                    }
+            }  
+
+
+
+            .flex {
                 flex: 1 1 50%;
                 padding-bottom: 3rem;
             }
@@ -47,35 +133,29 @@
 
             .neumorphic {
                 box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
-                    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+                    -12px -12px 24px 0 rgba(255, 255, 255, 0.2);/*0.5*/
                 width: 500px;
                 height: 200px;
                 border-radius: 40px;
                 overflow: hidden;
+                padding: 1.3rem;
                 display: flex;
+                margin-bottom: 5rem;
 
             }
   
-            .clock {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
+            .type1 {
+                position: relative;
+                
+                /*transform: translateX(-50%) translateY(-50%);*/
                 color: #17D4FE;
-                font-size:60px;
-                font-family: Orbitron;
+                /*font-size:60px;*/
+                font-family: mine;
                 letter-spacing: 7px;
             }
 
-            .variation {
-                justify-content:initial; /*space-around;*/
-                align-items: center;
-                width: inherit;
-                height: inherit;
-                margin-bottom: 4rem;
-            }
 
-            .clock span {
+            .type1 span {
                 display: flex;
                 align-items: center;
                 text-align: center;
@@ -91,7 +171,7 @@
             
 
                 
-            .clock strong {
+            .type1 strong {
 
                 display: flex;
                 align-items: center;
@@ -105,17 +185,111 @@
                 font-weight: lighter; 
             } 
 
+            .neumorphic--inset {
+                box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+                    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+            }
+
+
+            .type2 {
+                justify-content:initial; /*space-around;*/
+                align-items: center;
+            }
+
+            .type2 span {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem;
+                overflow: hidden;
+                padding: 0.65rem;
+                box-shadow: /*inset*/ 8px 8px 16px 0 rgba(0, 0, 0, 0.2);/*,
+                    inset -8px -8px 16px 0 rgba(255, 255, 255, 0.4);*/
+
+                /*padding-bottom: 1.5rem;*/
+                position: relative;
+                /*font-size: 5rem;*/
+            }
+            
+
+                
+            .type2 strong {
+
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                width:inherit;
+                height: 100%;
+                border-radius: 1rem;
+                overflow: hidden;
+                font-family: mine; 
+                font-weight: lighter;    
+                background-color: #bbc8ac;
+                color: black;
+                        
+            }
+            
+
+            .maker {
+                margin-bottom: 3rem;
+            }
+            .maker a {
+                color: #17D4FE;
+
+            }
+
+
+            .variation1 {
+            background: linear-gradient(
+                -45deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(255, 255, 255, 0.3)
+            );
+            }
+
+            .neumorphic p{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 10%;
+            overflow: hidden;
+            padding: 0.65rem;
+            box-shadow: inset 8px 8px 16px 0 rgba(0, 0, 0, 0.2),
+                inset -8px -8px 16px 0 rgba(255, 255, 255, 0.4);
+            }
 
         </style>      
     </header>
-    <div class="neumorphic variation clock">
-        <!--span><strong>Auto</strong></span-->
-        <span><strong id="time-counters" class="border border-light my-4 p-4"></strong></span>
-
-
+    <div class="neumorphic">
+        <h2>Neumorphic Digital Crystal Clock Concept</h2>
+        <p>Resize page to view page in different colors </p>
     </div>
-    <p class="fonta">A neumorphic digital clock concept</p>
-    <div id="MyClockDisplay" class="clock" ></div>
+    <div class="neumorphic type1">
+        <!--span><strong>Auto</strong></span-->
+        <span><strong id="clock1" class="neuFont"></strong></span>
+    </div>
+    
+
+
+    <div class="neumorphic type2">
+        <!--span><strong>Auto</strong></span-->
+        <span><strong id="clock" class="neuFont"></strong></span>
+    </div>
+
+    <div class="neumorphic variation1">
+        <!--span><strong>Auto</strong></span-->
+        <span><strong id="clock" class="neuFont">EMPTY SPACE</strong></span>
+    </div>    
+
+    <div class="maker">
+        <span>Concept by <a href="mgregchi.tk">Mgregchi</a></span>
+        <p>Improve this page on <a href="">GITHUB</a></p>
+    </div>
     <script>
         function showTime(){
             var date = new Date();
@@ -134,7 +308,7 @@
             }
             
             if(h >= 12){
-                //h = h - 12;
+                h = h - 12;
                 session = "PM";
             }
             
@@ -144,7 +318,9 @@
             
             var time = h + ":" + m + ":" + s + " " + session;
             //document.getElementById("MyClockDisplay").innerText = time;
-            document.getElementById("time-counters").textContent = time;
+            document.getElementById("clock").textContent = time;
+            document.getElementById("clock1").textContent = time;
+
             
             setTimeout(showTime, 1000);
             
